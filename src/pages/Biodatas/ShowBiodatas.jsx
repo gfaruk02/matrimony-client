@@ -6,7 +6,7 @@ const ShowBiodatas = ({biodats}) => {
         <div>
 
         <div className="max-w-xs rounded-md shadow-md bg-rose-900 text-gray-100">
-            <img src={image} alt="" className=" w-full rounded-t-md h-80 bg-gray-500" />
+            <img src={image} alt="" className=" w-full rounded-t-md h-64 bg-gray-500" />
             <div className="flex flex-col justify-between space-y-8">
                 <div className="space-y-2">
                     <h2 className="text-xl mt-4 font-semibold tracki">Biodata Id: {biodataId} </h2>

@@ -63,12 +63,6 @@ const ViewBiodata = () => {
                                       <p className="mt-3">Email: {item.email}</p>
                                       <p className="mt-3">Mobile Number: {item.mobileNumber} </p>
                                   </div>
-                                  {/* <div> 
-                                    <button name="member" value='Padding' onClick={handleapplypremium} className="py-2 px-5 bg-rose-500 rounded-lg"> Apply Premium</button>
-                                  </div> */}
-                                  {/* <td className="p-3">
-                                        {item.role === 'panding' ? 'Premium' : <button onClick={() => handleapplypremium(item)} className="btn bg-orange-500 text-white text-xl">Apply Premium </button>}
-                                    </td> */}
                                    {item.member == "user" ? <td className="p-3">
                                    <button onClick={() => handleapplypremium(item)} className="btn bg-rose-500 text-white text-xl rounded-lg py-3 px-24">Apply To Premium </button>
                                     </td>: ''}
@@ -78,9 +72,9 @@ const ViewBiodata = () => {
                                       <div className="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:bg-rose-400">
                                           <h3 className="text-xl font-semibold tracki">Personal Info </h3>
                                           <p className="mt-3">Date Of Birth: {item.dateOfBirth}</p>
-                                          <p className="mt-3">Height: {item.height}</p>
-                                          <p className="mt-3">Weight: {item.weight} </p>
-                                          <p className="mt-3">Age: {item.age} </p>
+                                          <p className="mt-3">Height: {item.height} cm</p>
+                                          <p className="mt-3">Weight: {item.weight} kg</p>
+                                          <p className="mt-3">Age: {item.age} Years</p>
                                           <p className="mt-3">race: {item.race} </p>
                                       </div>
                                       <div className="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:bg-rose-400">
@@ -92,9 +86,9 @@ const ViewBiodata = () => {
                                       </div>
                                       <div className="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:bg-rose-400">
                                           <h3 className="text-xl font-semibold tracki">Partner Preferences</h3>
-                                          <p className="mt-3">Expected Partner Age:  {item.expectedPartnerAge}</p>
-                                          <p className="mt-3">Expected Partner Height:  {item.expectedPartnerHeight}</p>
-                                          <p className="mt-3">Expected Partner Weight:  {item.expectedPartnerWeight}</p>
+                                          <p className="mt-3">Expected Partner Age:  {item.expectedPartnerAge} Years</p>
+                                          <p className="mt-3">Expected Partner Height:  {item.expectedPartnerHeight} cm</p>
+                                          <p className="mt-3">Expected Partner Weight:  {item.expectedPartnerWeight} kg</p>
                                       </div>
                                   </div>
 
