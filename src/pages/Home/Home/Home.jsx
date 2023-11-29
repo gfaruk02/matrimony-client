@@ -13,6 +13,7 @@ const Home = () => {
     // const sortBiodatas = [...premiumBiodata].sort((a, b) => b.age - a.age);
     const sortBiodatas = [...premiumBiodata].sort((a, b) => a.age - b.age);
     // console.log(sortBiodatas);
+    const showPremium = sortBiodatas.slice(0, 6)
     return (
         <div>
             <Banner></Banner>
@@ -23,7 +24,7 @@ const Home = () => {
                     Profiles</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-between gap-5">
                     {
-                        sortBiodatas?.map(premium => <PremiumProfiles key={premium._id} premium={premium}></PremiumProfiles>)
+                        showPremium?.map(premium => <PremiumProfiles key={premium._id} premium={premium}></PremiumProfiles>)
                     }
                 </div>
             </div>
