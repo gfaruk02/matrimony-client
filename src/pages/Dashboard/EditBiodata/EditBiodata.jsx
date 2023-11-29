@@ -24,13 +24,11 @@ const EditBiodata = () => {
         const permanentDivision = form.permanentDivision.value;
         const presentDivision = form.presentDivision.value;
         const mobileNumber = form.mobileNumber.value;
-        // const email = form.email.value;
         const expectedPartnerAge = form.expectedPartnerAge.value;
         const expectedPartnerHeight = form.expectedPartnerHeight.value;
         const expectedPartnerWeight = form.expectedPartnerWeight.value;
-
         const biodataInfo = { member, name, fatherName, motherName, dateOfBirth, image, occupation, biodataType, race, age, height, weight, permanentDivision, presentDivision, mobileNumber, email: user.email, expectedPartnerAge, expectedPartnerHeight, expectedPartnerWeight }
-        console.log(biodataInfo);
+        // console.log(biodataInfo);
         if (user) {
             axiosSecure.post('/biodatas', biodataInfo)
                 .then(res => {
@@ -101,9 +99,13 @@ const EditBiodata = () => {
                                 <label className="text-sm text-white">Race</label> <br />
                                 <select name="race" className="select w-full py-1 rounded-lg select-bordered">
                                     <option disabled selected>Pick one</option>
-                                    <option>Bangali</option>
+                                    <option>Muslims</option>
+                                    <option>Hindus</option>
                                     <option>Chakma</option>
-
+                                    <option>Garo</option>
+                                    <option>Tripuri</option>
+                                    <option>Marma</option>
+                                    <option>Buddhist</option>
                                 </select>
 
                             </div>
