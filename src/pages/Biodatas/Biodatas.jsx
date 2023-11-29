@@ -16,19 +16,20 @@ const Biodatas = () => {
     }, [biodatas]);
 
     // console.log(biodatas);
-    const handleSearch = () => {
+    const handleSearch = (e) => {
+        e.preventDefault()
         const filterAges = biodatas?.filter((person) => {
             const min = parseInt(minAge)
             const max = parseInt(maxAge)
             return (
                 (person.age >= min && person.age <= max) &&
-                (gender == person.biodataType) &&
-                (division == person.permanentDivision)
+                (gender === 'all' || gender === person.biodataType) &&
+                (division === 'all' || division === person.permanentDivision)
 
             );
-
         })
         setFilteredBiodata(filterAges)
+       
     }
 
     // console.log(biodata);
@@ -49,14 +50,14 @@ const Biodatas = () => {
                                 <input name="minAge" type="number" placeholder="Min Age" className=" py-2 pl-2 w-full rounded-md focus:ring focus:ri border-gray-700 text-gray-900 "
                                     value={minAge}
                                     onChange={(e) => setMinAge(e.target.value)}
-                                />
+                                 />
                             </div>
                             <div>
                                 <p className=" py-1 text-sm">Max Age</p>
                                 <input name="maxAge" type="number" placeholder="Your name" className=" py-2 pl-2 w-full rounded-md focus:ring focus:ri border-gray-700 text-gray-900"
                                     value={maxAge}
                                     onChange={(e) => setMaxAge(e.target.value)}
-                                />
+                                 />
                             </div>
                         </div>
                         <div className="pt-2">
