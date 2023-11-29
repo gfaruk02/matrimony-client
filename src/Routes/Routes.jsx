@@ -26,11 +26,13 @@ import Checkout from "../componets/Checkout";
 import ContactRequest from "../pages/Dashboard/ContactRequest/ContactRequest";
 import AdminRoute from "./AdminRoute";
 import UserHome from "../pages/Dashboard/UserHome/UserHome";
+import ErrorPage from "../componets/ErrorPage/ErrorPage";
 
 export const router = createBrowserRouter([
     {
         path: "/",
         element: <Main></Main>,
+        errorElement: <ErrorPage></ErrorPage>,
         children: [
             {
                 path: '/',
