@@ -49,9 +49,9 @@ const Biodatas = () => {
     // console.log(biodata);
     return (
         <div>
-            <section className="p-6 bg-gray-800 text-gray-100 mt-12">
+            <section className="p-6 bg-blue-950 text-gray-100 mt-12">
                 <div className="container grid gap-6 mx-auto grid-cols-1 lg:grid-cols-3">
-                    <div className="w-full rounded-md bg-gray-900 px-5 lg:mt-20">
+                    <div className="w-full rounded-md bg-rose-900 px-5 lg:mt-20">
                         <span className="block mb-2 text-violet-400"></span>
                         <h1 className="text-5xl font-extrabold ">Filter</h1>
                         <p className="my-5">

@@ -1,35 +1,33 @@
 import { Link } from "react-router-dom";
-
+import { FiLogIn } from "react-icons/fi";
+import { MdWorkspacePremium } from "react-icons/md";
+import { FaCommentDots } from "react-icons/fa";
 
 const Service = () => {
     return (
         <div>
-
             <section className="m-4 md:m-8 text-gray-800">
                 <div className="container mx-auto p-4 my-6 space-y-2 text-center">
                     <h2 className="text-5xl font-bold">How to find your life partner</h2>
                 </div>
                 <div className="container mx-auto grid justify-center gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                    <Link to='/register'>
+                    <Link className="hover:bg-rose-200" to='/register'>
                         <div className="flex flex-col items-center p-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-8 h-8 text-violet-400">
-                                <path fillRule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clipRule="evenodd"></path>
-                            </svg>
+                        <div className="text-4xl text-rose-800 font-extrabold">
+                        <FiLogIn />
+                        </div>
                             <h3 className="my-3 text-2xl font-semibold">Sign up with Email</h3>
                             <div className="space-y-1 leadi">
                                 <p> Register for yourself or your close one</p>
                                 <p>tick markGive your full information</p>
                                 <p>tick markComplete each step carefully</p>
-
-
-
                             </div>
                         </div>
                     </Link>
-                    <div className="flex flex-col items-center p-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-8 h-8 text-violet-400">
-                            <path fillRule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clipRule="evenodd"></path>
-                        </svg>
+                    <div className="flex flex-col items-center p-4 hover:bg-rose-200">
+                    <div className="text-4xl text-rose-800 font-extrabold">
+                    <MdWorkspacePremium />
+                        </div>
                         <h3 className="my-3 text-2xl font-semibold">Become a premium member</h3>
                         <div className="space-y-1 leadi">
                             <p>Pay via card and bKash</p>
@@ -37,10 +35,10 @@ const Service = () => {
                             <p>Send request to see full bio-data</p>
                         </div>
                     </div>
-                    <div className="flex flex-col items-center p-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-8 h-8 text-violet-400">
-                            <path fillRule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clipRule="evenodd"></path>
-                        </svg>
+                    <div className="flex flex-col items-center p-4 hover:bg-rose-200">
+                    <div className="text-4xl text-rose-800 font-extrabold">
+                    <FaCommentDots />
+                        </div>
                         <h3 className="my-3 text-2xl font-semibold">Communicate and marry</h3>
                         <div className="space-y-1 leadi">
                             <p>Send communication request</p>
@@ -51,15 +49,7 @@ const Service = () => {
                 </div>
             </section>
 
-
-
-
-
-
-
-
-
-            <section className="bg-gray-800 text-gray-100">
+            <section className="bg-blue-950 text-gray-100">
                 <div className="container max-w-xl p-6 py-12 mx-auto space-y-24 lg:px-8 lg:max-w-7xl">
                     <div>
                         <h2 className="text-3xl font-bold tracki text-center sm:text-5xl text-gray-50">How Websites Work </h2>
@@ -72,7 +62,7 @@ const Service = () => {
                             <div className="mt-12 space-y-12">
                                 <div className="flex">
                                     <div className="flex-shrink-0">
-                                        <div className="flex items-center justify-center w-12 h-12 rounded-md bg-violet-400 text-gray-900">
+                                        <div className="flex items-center justify-center w-12 h-12 rounded-md bg-rose-400 text-gray-900">
                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-7 h-7">
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                                             </svg>
@@ -85,7 +75,7 @@ const Service = () => {
                                 </div>
                                 <div className="flex">
                                     <div className="flex-shrink-0">
-                                        <div className="flex items-center justify-center w-12 h-12 rounded-md bg-violet-400 text-gray-900">
+                                        <div className="flex items-center justify-center w-12 h-12 rounded-md bg-rose-400 text-gray-900">
                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-7 h-7">
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                                             </svg>
@@ -98,7 +88,7 @@ const Service = () => {
                                 </div>
                                 <div className="flex">
                                     <div className="flex-shrink-0">
-                                        <div className="flex items-center justify-center w-12 h-12 rounded-md bg-violet-400 text-gray-900">
+                                        <div className="flex items-center justify-center w-12 h-12 rounded-md bg-rose-400 text-gray-900">
                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-7 h-7">
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                                             </svg>
@@ -123,7 +113,7 @@ const Service = () => {
                                 <div className="mt-12 space-y-12">
                                     <div className="flex">
                                         <div className="flex-shrink-0">
-                                            <div className="flex items-center justify-center w-12 h-12 rounded-md bg-violet-400 text-gray-900">
+                                            <div className="flex items-center justify-center w-12 h-12 rounded-md bg-rose-400 text-gray-900">
                                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-7 h-7">
                                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                                                 </svg>
@@ -137,7 +127,7 @@ const Service = () => {
                                     </div>
                                     <div className="flex">
                                         <div className="flex-shrink-0">
-                                            <div className="flex items-center justify-center w-12 h-12 rounded-md bg-violet-400 text-gray-900">
+                                            <div className="flex items-center justify-center w-12 h-12 rounded-md bg-rose-400 text-gray-900">
                                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-7 h-7">
                                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                                                 </svg>
@@ -150,7 +140,7 @@ const Service = () => {
                                     </div>
                                     <div className="flex">
                                         <div className="flex-shrink-0">
-                                            <div className="flex items-center justify-center w-12 h-12 rounded-md bg-violet-400 text-gray-900">
+                                            <div className="flex items-center justify-center w-12 h-12 rounded-md bg-rose-400 text-gray-900">
                                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-7 h-7">
                                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                                                 </svg>
