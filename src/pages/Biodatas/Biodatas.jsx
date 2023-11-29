@@ -2,9 +2,14 @@
 import { useEffect, useState } from "react";
 import useBiodata from "../../Hooks/useBiodata";
 import ShowBiodatas from "./ShowBiodatas";
+import TablePagination from '@mui/material/TablePagination';
 
 const Biodatas = () => {
     const biodatas = useBiodata()
+    // const showBiodatas = biodatas.slice(0, 20)
+
+    const [page, setPage] = useState(0);
+    const [rowsPerPage, setRowsPerPage] = useState(20);
     const [minAge, setMinAge] = useState('')
     const [maxAge, setMaxAge] = useState('')
     const [gender, setGender] = useState('')
@@ -15,7 +20,16 @@ const Biodatas = () => {
         setFilteredBiodata(biodatas);
     }, [biodatas]);
 
-    // console.log(biodatas);
+    //pagination codes
+    const handleChangePage = (event, newPage) => {
+        setPage(newPage);
+    };
+
+    const handleChangeRowsPerPage = (event) => {
+        setRowsPerPage(parseInt(event.target.value, 10));
+        setPage(0);
+    };
+    // console.log(showBiodatas);
     const handleSearch = (e) => {
         e.preventDefault()
         const filterAges = biodatas?.filter((person) => {
@@ -29,7 +43,7 @@ const Biodatas = () => {
             );
         })
         setFilteredBiodata(filterAges)
-       
+
     }
 
     // console.log(biodata);
@@ -50,14 +64,14 @@ const Biodatas = () => {
                                 <input name="minAge" type="number" placeholder="Min Age" className=" py-2 pl-2 w-full rounded-md focus:ring focus:ri border-gray-700 text-gray-900 "
                                     value={minAge}
                                     onChange={(e) => setMinAge(e.target.value)}
-                                 />
+                                />
                             </div>
                             <div>
                                 <p className=" py-1 text-sm">Max Age</p>
                                 <input name="maxAge" type="number" placeholder="Your name" className=" py-2 pl-2 w-full rounded-md focus:ring focus:ri border-gray-700 text-gray-900"
                                     value={maxAge}
                                     onChange={(e) => setMaxAge(e.target.value)}
-                                 />
+                                />
                             </div>
                         </div>
                         <div className="pt-2">
@@ -92,9 +106,22 @@ const Biodatas = () => {
                             Profiles</h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-between gap-4">
                             {
-                                filteredBiodata?.map(biodats => <ShowBiodatas key={biodats._id} biodats={biodats}> </ShowBiodatas>)
+                                filteredBiodata?.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map(biodats => <ShowBiodatas key={biodats._id} biodats={biodats}> </ShowBiodatas>)
                             }
                         </div>
+
+                      <div className=" mt-10 bg-rose-400 rounded-lg "> 
+                      <TablePagination
+                            rowsPerPageOptions={[10,20,30,50,100]}
+                            component="div"
+                            count={100}
+                            page={page}
+                            onPageChange={handleChangePage}
+                            rowsPerPage={rowsPerPage}
+                            onRowsPerPageChange={handleChangeRowsPerPage}
+                        />
+                      </div>
+
                     </div>
                 </div>
             </section>
