@@ -21,8 +21,9 @@ const Home = () => {
             </Helmet>
             <Banner></Banner>
 
+
             <div className="w-10/12 mx-auto">
-                <h2 className="text-center text-4xl py-12 font-extrabold "> Premium Member
+                <h2 className="text-center text-4xl py-12 font-extrabold " data-aos="fade-down"> Premium Member
                     Profiles</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-between gap-5">
                     {

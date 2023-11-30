@@ -16,8 +16,8 @@ const Service = () => {
                         <div className="text-4xl text-rose-800 font-extrabold">
                         <FiLogIn />
                         </div>
-                            <h3 className="my-3 text-2xl font-semibold">Sign up with Email</h3>
-                            <div className="space-y-1 leadi">
+                            <h3 className="my-3 text-2xl font-semibold" data-aos="fade-down-right">Sign up with Email</h3>
+                            <div className="space-y-1 leadi" data-aos="fade-down-left">
                                 <p> Register for yourself or your close one</p>
                                 <p>tick markGive your full information</p>
                                 <p>tick markComplete each step carefully</p>
@@ -28,8 +28,8 @@ const Service = () => {
                     <div className="text-4xl text-rose-800 font-extrabold">
                     <MdWorkspacePremium />
                         </div>
-                        <h3 className="my-3 text-2xl font-semibold">Become a premium member</h3>
-                        <div className="space-y-1 leadi">
+                        <h3 className="my-3 text-2xl font-semibold" data-aos="fade-down-right">Become a premium member</h3>
+                        <div className="space-y-1 leadi" data-aos="fade-down-left">
                             <p>Pay via card and bKash</p>
                             <p>Search bride/groom</p>
                             <p>Send request to see full bio-data</p>
@@ -39,8 +39,8 @@ const Service = () => {
                     <div className="text-4xl text-rose-800 font-extrabold">
                     <FaCommentDots />
                         </div>
-                        <h3 className="my-3 text-2xl font-semibold">Communicate and marry</h3>
-                        <div className="space-y-1 leadi">
+                        <h3 className="my-3 text-2xl font-semibold" data-aos="fade-down-right">Communicate and marry</h3>
+                        <div className="space-y-1 leadi" data-aos="fade-down-left">
                             <p>Send communication request</p>
                             <p>Send message</p>
                             <p>Meet and get married</p>
@@ -51,7 +51,7 @@ const Service = () => {
 
             <section className="bg-blue-950 text-gray-100">
                 <div className="container max-w-xl p-6 py-12 mx-auto space-y-24 lg:px-8 lg:max-w-7xl">
-                    <div>
+                    <div data-aos="flip-left">
                         <h2 className="text-3xl font-bold tracki text-center sm:text-5xl text-gray-50">How Websites Work </h2>
                         <p className="max-w-3xl mx-auto mt-4 text-xl text-center text-gray-400">We provide best Security and privacy ensured</p>
                     </div>
@@ -68,7 +68,7 @@ const Service = () => {
                                             </svg>
                                         </div>
                                     </div>
-                                    <div className="ml-4">
+                                    <div className="ml-4" data-aos="flip-left">
                                         <h4 className="text-lg font-medium leadi text-gray-50">Create Your Profile</h4>
                                         <p className="mt-2 text-gray-400">Create your Detail profile, add photos and describe your partner preference</p>
                                     </div>
@@ -102,7 +102,7 @@ const Service = () => {
                             </div>
                         </div>
                         <div aria-hidden="true" className="mt-10 lg:mt-0">
-                            <img src="https://i.ibb.co/48r7wT4/wedding.jpg" alt="" className="mx-auto rounded-lg shadow-lg bg-gray-500" />
+                            <img data-aos="flip-up" src="https://i.ibb.co/48r7wT4/wedding.jpg" alt="" className="mx-auto rounded-lg shadow-lg bg-gray-500" />
                         </div>
                     </div>
                     <div>
@@ -119,7 +119,7 @@ const Service = () => {
                                                 </svg>
                                             </div>
                                         </div>
-                                        <div className="ml-4">
+                                        <div className="ml-4" data-aos="zoom-in-right">
                                             <h4 className="text-lg font-medium leadi text-gray-50">Matchmaking Service</h4>
                                             <p className="mt-2 text-gray-400">
                                                 Professional & Award-Winning Matchmaking Service Agency</p>
@@ -133,7 +133,7 @@ const Service = () => {
                                                 </svg>
                                             </div>
                                         </div>
-                                        <div className="ml-4">
+                                        <div className="ml-4" data-aos="zoom-in-down">
                                             <h4 className="text-lg font-medium leadi text-gray-50">Special consultancy</h4>
                                             <p className="mt-2 text-gray-400">We advice on how to make your profile stand out. If you are a premium customer, we will aid you in search of suitable matches based on your preferences. We will aid you by providing some links of potential bride/groom based on your preference.</p>
                                         </div>
@@ -146,7 +146,7 @@ const Service = () => {
                                                 </svg>
                                             </div>
                                         </div>
-                                        <div className="ml-4">
+                                        <div className="ml-4" data-aos="zoom-in-up">
                                             <h4 className="text-lg font-medium leadi text-gray-50">Security and privacy ensured</h4>
                                             <p className="mt-2 text-gray-400">Your photo, real name and complete profile will not be seen by any other user without your permission. For contact information user have to go through two step security process. We also verify mobile number and take necessary action against doubtful profile.</p>
                                         </div>
@@ -154,7 +154,7 @@ const Service = () => {
                                 </div>
                             </div>
                             <div className="mt-10 lg:mt-0 lg:col-start-1 lg:row-start-1">
-                                <img src="https://i.ibb.co/PhHfnNM/ff.png" alt="" className="mx-auto rounded-lg shadow-lg bg-gray-500" />
+                                <img data-aos="flip-up" src="https://i.ibb.co/PhHfnNM/ff.png" alt="" className="mx-auto rounded-lg shadow-lg bg-gray-500" />
                             </div>
                         </div>
                     </div>
