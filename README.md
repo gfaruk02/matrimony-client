@@ -1,12 +1,12 @@
 # React + Vite
 
 
-vercel link: http://localhost:5000
-http://localhost:5000
+vercel link: https://matrimony-server-smoky.vercel.app
+
 
 live link: https://matrimony-7efdc.web.app/
 
-local server : http://localhost:5000
+local server :
 
 
 

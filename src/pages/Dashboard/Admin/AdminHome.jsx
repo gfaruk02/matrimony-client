@@ -18,15 +18,15 @@ const AdminHome = () => {
   const femalesBiodata = biodatas?.filter(females => females.biodataType === "Female");
   const premiumBiodata = biodatas?.filter(data => data.member === "premium");
 
-  const { data: contactRequest } = useQuery({
-    queryKey: ['contactRequest'],
+  const { data: contactRequests } = useQuery({
+    queryKey: ['contactRequests'],
     queryFn: async () => {
-      const res = await axiosSecure.get('/contactRequest');
+      const res = await axiosSecure.get('/contactRequests');
       return res.data;
     }
   })
   //   console.log(contactRequest.amount);
-  const revenue = contactRequest?.reduce((total, item) => total + item.price, 0)
+  const revenue = contactRequests?.reduce((total, item) => total + item.price, 0)
   // console.log(revenue);
   const biodata = (biodatas?.length)
   const male = (malesBiodata?.length)

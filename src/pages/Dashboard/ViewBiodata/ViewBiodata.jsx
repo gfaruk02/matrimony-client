@@ -61,8 +61,8 @@ const ViewBiodata = () => {
                                     <p className="mt-3">Email: {item.email}</p>
                                     <p className="mt-3">Mobile Number: {item.mobileNumber} </p>
                                 </div>
-                                {item.member == "user" ? <td className="p-3">
-                                    <button onClick={() => handleapplypremium(item)} className="btn bg-rose-500 text-white text-xl rounded-lg py-3 px-24">Apply To Premium </button>
+                                {item.member == "User" ? <td className="p-3">
+                                    <button onClick={() => handleapplypremium(item)} className="btn bg-rose-500 text- text-xl rounded-lg py-3 px-24">Apply To Premium </button>
                                 </td> : ''}
                             </div>
                             <div className="md:ml-24 relative col-span-12 px-4 space-y-5 sm:col-span-9">

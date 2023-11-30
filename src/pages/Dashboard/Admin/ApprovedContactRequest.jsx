@@ -6,10 +6,10 @@ import Swal from "sweetalert2";
 const ApprovedContactRequest = () => {
     // console.log(user.email);
     const axiosSecure = useAxiosSecure()
-    const {data: contactRequest=[], refetch} = useQuery({
-          queryKey: ['contactRequest'],
+    const {data: contactRequests=[], refetch} = useQuery({
+          queryKey: ['contactRequests'],
           queryFn: async() => {
-              const res = await axiosSecure.get('/contactRequest');
+              const res = await axiosSecure.get('/contactRequests');
               return res.data;
           }
     })
@@ -23,7 +23,7 @@ const ApprovedContactRequest = () => {
             confirmButtonText: "Yes, Active!"
           }).then((result) => {
             if (result.isConfirmed) {
-                axiosSecure.patch(`/contactRequest/${item._id}`)
+                axiosSecure.patch(`/contactRequests/${item._id}`)
                 .then(res => {
                     console.log(res.data);
                     if (res.data.modifiedCount > 0) {
@@ -38,7 +38,7 @@ const ApprovedContactRequest = () => {
             }
           });
     }
-    console.log(contactRequest);
+    console.log(contactRequests);
     return (
         <div>
             <div className="container p-2 mx-auto sm:p-4 text-gray-100">
@@ -57,7 +57,7 @@ const ApprovedContactRequest = () => {
                         </thead>
                         <tbody>
 
-                            {contactRequest.map((item, index) =>
+                            {contactRequests.map((item, index) =>
 
                                 <tr key={item._id} className="border-b text-gray-800 border-opacity-20 dark:border-gray-700 dark:bg-gray-900 text-center">
                                     <td className="p-3">
