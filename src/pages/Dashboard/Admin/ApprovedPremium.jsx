@@ -45,7 +45,7 @@ const ApprovedPremium = () => {
     return (
         <div>
                        <div className="container p-2 mx-auto sm:p-4 text-gray-100">
-                <h2 className="mb-4 text-2xl font-semibold leadi text-gray-800">Contacts</h2>
+                <h2 className="mb-4 text-2xl font-semibold leadi text-gray-800">Premium Requset List</h2>
                 <div className="overflow-x-auto">
                     <table className="w-3/4 p-6 text-xs whitespace-nowrap text-center">
                         <thead>
@@ -79,25 +79,6 @@ const ApprovedPremium = () => {
                                     <td className="p-3">
                                         {item.member === 'Premium' ? 'Premium' : <button onClick={() => handleApprovePremium(item)} className=" text-xl"> Approve</button>}
                                     </td>
-                                    {/* <td className="p-3">
-                                        {user.role === 'admin' ? 'Admin' : <button onClick={() => handleMakeAdmin(user)} className="btn bg-orange-500 text-white text-xl"> <FaUsers></FaUsers></button>}
-                                    </td>
-                                    <td className="p-3">
-                                        {user.role === 'premium' ? 'Premium' : <button onClick={() => handleMakePremium(user)} className="btn bg-orange-500 text-white text-xl"> <FaRegAddressBook /></button>}
-                                    </td> */}
-                                    {/* <td className="p-3">
-                                        <button>Premium
-                                        </button>
-
-
-                                    </td>
-                                    <td className="p-3 ">
-                                        <p>{user.occupation}</p>
-                                    </td> */}
-                                    {/* <td className="p-3 text-center">
-                    <td> <button onClick={() => handleDeleteFavourites(user._id)} className="btn btn-ghost text-red-600"> <FaTrashAlt></FaTrashAlt></button></td>
-					</td> */}
-
                                 </tr>)}
                         </tbody>
                     </table>

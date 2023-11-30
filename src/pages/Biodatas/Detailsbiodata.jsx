@@ -31,19 +31,10 @@ const Detailsbiodata = () => {
             const res = await axiosSecure.get('/users');
             return res.data;
         }
-        
+
     })
-    // const {role} = users
-    // console.log(users.email);
-    
-    // console.log(users[3].role);
-    // console.log(users[3].email);
-    // const PremiumUser = users?.find(user => user.email === users.email)
-    // console.log(PremiumUser);
-    // const PremiumUser = users?.find(user => user.role === "premium");
-    // console.log(PremiumUser);
     const premiumUser = users.find(currentUser => currentUser.email === user.email);
-console.log(premiumUser);
+    console.log(premiumUser);
 
     const handleAddToFavourites = () => {
         if (user && user.email) {
@@ -53,7 +44,7 @@ console.log(premiumUser);
                 name,
                 permanentDivision,
                 occupation
-                
+
             }
             axiosSecure.post('/favourites', favourite)
                 .then(res => {
@@ -99,28 +90,28 @@ console.log(premiumUser);
                                 <p className="mt-3">Biodata Id {biodataId}</p>
                                 <p className="mt-3">Gender: {biodataType}</p>
                                 <p className="mt-3">Occupation: {occupation} </p>
-                            
-                                 <div className=" mt-10">
-                                 {(premiumUser?.role === "premium") ||(premiumUser?.role === "admin") ?
-                                ( <>
-                                 <p className="mt-3">Email: {email}</p>
-                             <p className="mt-3">Mobile Number: {mobileNumber} </p>
-                                 </>)
-                                  : 
-                                  (<Link to={`/checkout/${_id}`}>
-                                     <button type="button" className="flex items-center justify-center w-full p-2 font-semibold tracki rounded-md bg-rose-400 text-gray-900"> Request Contact Information</button>
-                                 </Link>
-                                 )
-                                 }
-                             </div>
+
+                                <div className=" mt-10">
+                                    {(premiumUser?.role === "premium") || (premiumUser?.role === "admin") ?
+                                        (<>
+                                            <p className="mt-3">Email: {email}</p>
+                                            <p className="mt-3">Mobile Number: {mobileNumber} </p>
+                                        </>)
+                                        :
+                                        (<Link to={`/checkout/${_id}`}>
+                                            <button type="button" className="flex items-center justify-center w-full p-2 font-semibold tracki rounded-md bg-rose-400 text-gray-900"> Request Contact Information</button>
+                                        </Link>
+                                        )
+                                    }
+                                </div>
                             </div>
                         </div>
                         <div className="md:ml-24 relative col-span-12 px-4 space-y-5 sm:col-span-9">
                             <div className="col-span-12 space-y-12 relative px-4 sm:col-span-8 sm:space-y-8 sm:before:absolute sm:before:top-2 sm:before:bottom-0 sm:before:w-0.5 sm:before:-left-3 before:bg-gray-700">
                                 <div className="md:mx-16 mt-10">
 
-                                    <button onClick={() => handleAddToFavourites(profiles)} 
-                                    type="button" className="flex items-center justify-center w-full p-3 font-semibold tracki rounded-md bg-rose-400 text-gray-900"> Add to favourites</button>
+                                    <button onClick={() => handleAddToFavourites(profiles)}
+                                        type="button" className="flex items-center justify-center w-full p-3 font-semibold tracki rounded-md bg-rose-400 text-gray-900"> Add to favourites</button>
                                 </div>
                                 <div className="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:bg-rose-400">
                                     <h3 className="text-xl font-semibold tracki">Personal Info </h3>

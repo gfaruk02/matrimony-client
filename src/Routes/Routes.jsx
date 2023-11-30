@@ -50,10 +50,6 @@ export const router = createBrowserRouter([
                 path: '/contact',
                 element: <Contact></Contact>
             },
-            // {
-            //     path:'/dashboard',
-            //     element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>
-            // },
             {
                 path: '/register',
                 element: <Register></Register>
@@ -62,22 +58,17 @@ export const router = createBrowserRouter([
                 path: '/login',
                 element: <Login></Login>
             },
-            // {
-            //     path: '/premiumprofilesdetails/:_id',
-            //     element: <PrivateRoute> <PremiumProfilesDetails></PremiumProfilesDetails> </PrivateRoute>,
-            //     loader: ()=>fetch('http://localhost:5000/biodatas')
-            // },
             {
                 path: '/detailsbiodata/:_id',
                 element: <PrivateRoute> <Detailsbiodata></Detailsbiodata> </PrivateRoute>,
                 loader: () => fetch('http://localhost:5000/biodatas')
             },
             {
-                path:'/checkout/:_id',
+                path: '/checkout/:_id',
                 element: <Checkout></Checkout>,
                 loader: () => fetch('http://localhost:5000/biodatas')
             }
-            
+
         ]
     },
     {
@@ -97,7 +88,7 @@ export const router = createBrowserRouter([
                 path: 'approvedpremium',
                 element: <AdminRoute><ApprovedPremium></ApprovedPremium></AdminRoute>
             },
-           
+
             {
                 path: 'approvedcontactrequest',
                 element: <AdminRoute><ApprovedContactRequest></ApprovedContactRequest></AdminRoute>
@@ -109,8 +100,8 @@ export const router = createBrowserRouter([
 
             //user routes
             {
-                path:'userhome',
-                element:<UserHome></UserHome>
+                path: 'userhome',
+                element: <UserHome></UserHome>
             },
             {
                 path: 'favouritebiodata',

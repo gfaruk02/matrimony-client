@@ -26,8 +26,8 @@ const AdminHome = () => {
     }
   })
   //   console.log(contactRequest.amount);
-  const revenue = contactRequest?.reduce((total, item) => total + item.amount, 0)
-  console.log(revenue);
+  const revenue = contactRequest?.reduce((total, item) => total + item.price, 0)
+  // console.log(revenue);
   const biodata = (biodatas?.length)
   const male = (malesBiodata?.length)
   const female = (femalesBiodata?.length)

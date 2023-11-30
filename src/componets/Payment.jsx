@@ -2,12 +2,10 @@ import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
 import CheckoutForm from "./CheckoutForm";
 
-
-const Checkout = () => {
-    
+const Payment = () => {
     const stripePromise = loadStripe(import.meta.env.VITE_PAYMENT_KEY)
     return (
-        <div className="mx-12 py-2 text-white mt-16">
+        <div className="mx-12 py-2 text-white">
         <Elements stripe={stripePromise}>
             <CheckoutForm></CheckoutForm>
         </Elements>
@@ -15,4 +13,4 @@ const Checkout = () => {
     );
 };
 
-export default Checkout;
+export default Payment;

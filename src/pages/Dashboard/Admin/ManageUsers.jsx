@@ -51,7 +51,7 @@ const ManageUsers = () => {
     return (
         <div>
             <div className="container p-2 mx-auto sm:p-4 text-gray-100">
-                <h2 className="mb-4 text-2xl font-semibold leadi text-gray-800">Contacts</h2>
+                <h2 className="mb-4 text-2xl font-semibold leadi text-gray-800">Total Users List</h2>
                 <div className="overflow-x-auto">
                     <table className="w-3/4 p-6 text-xs whitespace-nowrap text-center">
                         <thead>

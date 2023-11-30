@@ -15,7 +15,7 @@ const Biodatas = () => {
     const [gender, setGender] = useState('')
     const [division, setDivision] = useState('')
     const [filteredBiodata, setFilteredBiodata] = useState([]);
-    console.log(filteredBiodata);
+    // console.log(filteredBiodata);
     useEffect(() => {
         setFilteredBiodata(biodatas);
     }, [biodatas]);
