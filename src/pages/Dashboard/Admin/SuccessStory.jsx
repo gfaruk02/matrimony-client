@@ -5,6 +5,7 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
+import { Helmet } from "react-helmet-async";
 
 const style = {
   position: 'absolute',
@@ -33,6 +34,9 @@ const SuccessStory = () => {
   const handleClose = () => setOpen(false);
     return (
         <div>
+             <Helmet>
+                <title>Matrimony | Success Story</title>
+            </Helmet>
             <div className="container px-2 mx-auto sm:p-4 text-gray-100">
                 <h2 className="mb-4 text-2xl font-semibold leadi text-gray-800">Matrimony Couple Success Story</h2>
                 <div className="overflow-x-auto">

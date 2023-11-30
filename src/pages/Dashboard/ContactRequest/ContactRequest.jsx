@@ -3,6 +3,7 @@ import useAxiosSecure from "../../../Hooks/useAxiosSecure";
 import useAuth from "../../../Hooks/useAuth";
 import Swal from "sweetalert2";
 import { FaTrashAlt } from "react-icons/fa";
+import { Helmet } from "react-helmet-async";
 
 
 const ContactRequest = () => {
@@ -43,6 +44,9 @@ const ContactRequest = () => {
     }
     return (
         <div>
+             <Helmet>
+                <title>Matrimony | Contact Requests</title>
+            </Helmet>
             <div className="container p-2 mx-auto sm:p-4 text-gray-100">
                 <h2 className="mb-4 text-2xl font-semibold leadi text-gray-800">Contacts Request Lists</h2>
                 <div className="overflow-x-auto">

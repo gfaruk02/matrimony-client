@@ -1,6 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import useAxiosSecure from "../../../Hooks/useAxiosSecure";
 import { PieChart, pieArcLabelClasses } from '@mui/x-charts/PieChart';
+import { Helmet } from "react-helmet-async";
 
 const AdminHome = () => {
   const axiosSecure = useAxiosSecure()
@@ -48,6 +49,9 @@ const AdminHome = () => {
 
   return (
     <div className=" px-8">
+      <Helmet>
+        <title>Matrimony | AdminHome</title>
+      </Helmet>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 text-white text-center">
         <div className="bg-gray-700 py-8 rounded-lg">
           <h1 className="text-3xl">Total Biodata</h1>

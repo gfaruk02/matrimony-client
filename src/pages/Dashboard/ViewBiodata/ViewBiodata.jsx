@@ -2,6 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import useAuth from "../../../Hooks/useAuth";
 import useAxiosSecure from "../../../Hooks/useAxiosSecure";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 
 
 const ViewBiodata = () => {
@@ -45,6 +46,9 @@ const ViewBiodata = () => {
     }
     return (
         <div className="ml-2 lg:ml-10">
+             <Helmet>
+                <title>Matrimony | View Biodata</title>
+            </Helmet>
             {biodata.map(item =>
                 <section key={item._id} className="bg-blue-950 text-gray-100 ">
                     <div className="container max-w-5xl py-12 mx-auto md:pl-5">

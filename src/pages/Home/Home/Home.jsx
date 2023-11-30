@@ -4,7 +4,7 @@ import Counter from "../Counter/Counter";
 import PremiumProfiles from "../PremiumProfiles/PremiumProfiles";
 import Reviews from "../Reviews/Reviews";
 import Service from "../Service/Service";
-
+import { Helmet } from 'react-helmet-async';
 
 const Home = () => {
     const biodatas = useBiodata()
@@ -16,8 +16,10 @@ const Home = () => {
     const showPremium = sortBiodatas.slice(0, 6)
     return (
         <div>
+            <Helmet>
+                <title>Matrimony | Home</title>
+            </Helmet>
             <Banner></Banner>
-
 
             <div className="w-10/12 mx-auto">
                 <h2 className="text-center text-4xl py-12 font-extrabold "> Premium Member

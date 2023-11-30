@@ -1,6 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import useAxiosSecure from "../../../Hooks/useAxiosSecure";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 
 
 const ApprovedContactRequest = () => {
@@ -41,6 +42,9 @@ const ApprovedContactRequest = () => {
     console.log(contactRequests);
     return (
         <div>
+            <Helmet>
+                <title>Matrimony | Approve Contact Requests</title>
+            </Helmet>
             <div className="container p-2 mx-auto sm:p-4 text-gray-100">
                 <h2 className="mb-4 text-2xl font-semibold leadi text-blue-950">Contacts Request List</h2>
                 <div className="overflow-x-auto">

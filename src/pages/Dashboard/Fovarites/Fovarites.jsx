@@ -3,6 +3,7 @@ import useAxiosSecure from "../../../Hooks/useAxiosSecure";
 import useAuth from "../../../Hooks/useAuth";
 import { FaTrashAlt } from "react-icons/fa";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 
 
 const Fovarites = () => {
@@ -46,6 +47,9 @@ const Fovarites = () => {
     return (
         <div>
             {/* {favourites.length} */}
+            <Helmet>
+                <title>Matrimony | Favourites</title>
+            </Helmet>
             <div className="container p-2 mx-auto sm:p-4 text-gray-100">
 	<h2 className="mb-4 text-2xl font-semibold leadi text-gray-800">Your Favourite List </h2>
 	<div className="overflow-x-auto">

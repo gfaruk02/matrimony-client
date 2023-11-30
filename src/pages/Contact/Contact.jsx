@@ -1,8 +1,12 @@
+import { Helmet } from "react-helmet-async";
 
 
 const Contact = () => {
     return (
         <div>
+            <Helmet>
+                <title>Matrimony | Contact Us</title>
+            </Helmet>
             <section className="py-12 mt-12 bg-rose-900 text-gray-200">
                 <div className="grid max-w-6xl grid-cols-1 px-6 mx-auto lg:px-8 md:grid-cols-2 md:divide-x">
                     <div className="py-6 md:py-0 md:px-6 lg:mt-12">

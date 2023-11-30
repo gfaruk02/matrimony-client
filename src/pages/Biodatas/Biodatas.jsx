@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import useBiodata from "../../Hooks/useBiodata";
 import ShowBiodatas from "./ShowBiodatas";
 import TablePagination from '@mui/material/TablePagination';
+import { Helmet } from "react-helmet-async";
 
 const Biodatas = () => {
     const biodatas = useBiodata()
@@ -49,6 +50,9 @@ const Biodatas = () => {
     // console.log(biodata);
     return (
         <div>
+            <Helmet>
+                <title>Matrimony | Biodata</title>
+            </Helmet>
             <section className="p-6 bg-blue-950 text-gray-100 mt-12">
                 <div className="container grid gap-6 mx-auto grid-cols-1 lg:grid-cols-3">
                     <div className="w-full rounded-md bg-rose-900 px-5 lg:mt-20">

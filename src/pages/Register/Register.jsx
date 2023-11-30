@@ -6,6 +6,7 @@ import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import SocialLogin from "../../componets/SocialLogin/SocialLogin";
 import { updateProfile } from "firebase/auth";
 import useAxiosPublic from "../../Hooks/useAxiosPublic";
+import { Helmet } from "react-helmet-async";
 
 
 const Register = () => {
@@ -37,7 +38,7 @@ const Register = () => {
                 .then(result => {
                     console.log(result);
                     Swal.fire({
-                        position: 'top-center',
+                        position: 'center',
                         icon: 'success',
                         title: 'CONGRATULATIONS! You have now successfully registered! ',
                         showConfirmButton: false,
@@ -58,7 +59,7 @@ const Register = () => {
                                 if (res.data.insertedId) {
                                     console.log('User profile info Updated');
                                     Swal.fire({
-                                        position: "top-end",
+                                        position: "center",
                                         icon: "success",
                                         title: "User Created Successfully.",
                                         showConfirmButton: false,
@@ -80,6 +81,9 @@ const Register = () => {
     }
     return (
         <div>
+            <Helmet>
+                <title>Matrimony | Register</title>
+            </Helmet>
             <section className="bg-blue-200 text-gray-100">
                 <div className="container flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
                     <div className="w-full max-w-md md:mt-5 lg:mt-0 p-8 space-y-3 rounded-xl bg-blue-500 text-white">

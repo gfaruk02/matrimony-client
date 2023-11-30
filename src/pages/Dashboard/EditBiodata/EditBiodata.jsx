@@ -1,6 +1,7 @@
 import Swal from "sweetalert2";
 import useAuth from "../../../Hooks/useAuth";
 import useAxiosSecure from "../../../Hooks/useAxiosSecure";
+import { Helmet } from "react-helmet-async";
 
 
 const EditBiodata = () => {
@@ -48,6 +49,9 @@ const EditBiodata = () => {
     }
     return (
         <div>
+             <Helmet>
+                <title>Matrimony | Edit Biodata</title>
+            </Helmet>
             <section className="p-6 bg-blue-950 text-gray-50 md:ml-10">
                 <form onSubmit={handaleEditBiodata} className="container flex flex-col mx-auto space-y-12">
                     <fieldset className="grid grid-cols-4 gap-6 p-6 rounded-md shadow-sm bg-bue-950">

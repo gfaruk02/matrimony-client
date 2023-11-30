@@ -3,6 +3,7 @@ import useAuth from "../Hooks/useAuth";
 import { FaEdit, FaHome, FaPhone, FaRegAddressBook, FaStreetView, FaUserCog, FaUserGraduate, FaUserSecret } from "react-icons/fa";
 import Navbar from "../pages/Shared/Navbar/Navbar";
 import useAdmin from "../hooks/useAdmin";
+import { Helmet } from "react-helmet-async";
 
 
 const Dashboard = () => {
@@ -15,6 +16,9 @@ const Dashboard = () => {
 	}
 	return (
 		<div className="flex md:flex-row flex-col mt-20">
+			<Helmet>
+                <title>Matrimony | Dashboard</title>
+            </Helmet>
 			<div className="h-full p-3 space-y-2 w-72 bg-blue-950 text-gray-100">
 				{user || isAdmin ? <div className="flex items-center p-2 space-x-4">
 					<img src={user.photoURL} alt="" className="w-12 h-12 rounded-full bg-gray-500" />

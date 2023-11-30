@@ -1,6 +1,11 @@
+import { Helmet } from "react-helmet-async";
+
 const About = () => {
     return (
         <div>
+            <Helmet>
+                <title>Matrimony | About Us </title>
+            </Helmet>
             <section className="p-4 mt-16 lg:p-8 bg-blue-950 text-gray-100">
                 <div className="container mx-auto space-y-12">
                     <div className="flex flex-col overflow-hidden rounded-md shadow-sm lg:flex-row">
