@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 const useBiodata = () => {
     const [biodatas, setBiodatas] = useState([]);
     useEffect(()=>{
-        fetch('https://matrimony-server-smoky.vercel.app/biodatas')
+        fetch('http://localhost:5000/biodatas')
             .then(res=>res.json())
             .then(data=> setBiodatas(data));
     },[])

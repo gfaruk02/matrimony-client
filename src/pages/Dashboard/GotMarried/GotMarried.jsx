@@ -38,9 +38,9 @@ const GotMarried = () => {
 }
     return (
         <div>
-            <section className="p-6 bg-gray-800 text-gray-50">
+            <section className="md:ml-10 p-6 bg-blue-950 text-gray-50">
                 <form onSubmit={handaleReview} className="container flex flex-col mx-auto space-y-12">
-                    <fieldset className="grid grid-cols-4 gap-6 p-6 rounded-md shadow-sm bg-gray-900">
+                    <fieldset className="grid grid-cols-4 gap-6 p-6 rounded-md shadow-sm bg-bue-950">
                         <div className="grid grid-cols-6 gap-4 col-span-full lg:col-span-3">
                             <div className="col-span-full sm:col-span-3">
                                 <label className="text-sm">Your Biodata Number</label>

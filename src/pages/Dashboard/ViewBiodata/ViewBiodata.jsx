@@ -44,9 +44,9 @@ const ViewBiodata = () => {
         });
     }
     return (
-        <div className="ml-2">
+        <div className="ml-2 lg:ml-10">
             {biodata.map(item =>
-                <section key={item._id} className="bg-gray-800 text-gray-100 ">
+                <section key={item._id} className="bg-blue-950 text-gray-100 ">
                     <div className="container max-w-5xl py-12 mx-auto md:pl-5">
                         <div className="grid gap-4 mx-4 sm:grid-cols-12">
                             <div className="col-span-12 sm:col-span-3 md:w-52">

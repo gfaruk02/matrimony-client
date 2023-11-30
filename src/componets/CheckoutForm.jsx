@@ -130,7 +130,7 @@ const CheckoutForm = () => {
     return (
 
         <div> 
-            <section className="p-6 bg-gray-800 text-gray-50">
+            <section className="p-6 bg-blue-950 text-gray-50">
                 <form onSubmit={handleSubmit} className="mt-12 bg-blue-950 p-6 lg:p-12 rounded-lg">
 
                 <fieldset className="grid grid-cols-4 gap-6 p-6 rounded-md shadow-sm bg-blue-950">

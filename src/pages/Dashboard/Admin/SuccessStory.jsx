@@ -38,7 +38,7 @@ const SuccessStory = () => {
                 <div className="overflow-x-auto">
                     <table className="w-3/4 p-6 text-xs whitespace-nowrap text-center">
                         <thead>
-                            <tr className="bg-gray-700">
+                            <tr className="bg-blue-950">
                                 <th className="p-3">#</th>
                                 <th className="p-3">Male Id</th>
                                 <th className="p-3"> Female Id</th>
@@ -51,7 +51,7 @@ const SuccessStory = () => {
 
                             {reviews.map((story, index) =>
 
-                                <tr key={story._id} className="border-b text-gray-800 border-opacity-20 dark:border-gray-700 dark:bg-gray-900 text-center">
+                                <tr key={story._id} className="border-b text-gray-800 border-opacity-20 dark:border-gray-700 dark:bg-bue-950 text-center">
                                     <td className="p-3">
                                         <p>{index + 1}</p>
                                     </td>

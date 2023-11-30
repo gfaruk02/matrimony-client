@@ -79,7 +79,7 @@ const Detailsbiodata = () => {
     }
     return (
         <div className="grid grid-cols-1 lg:grid-cols-2 justify-between gap-4 mt-12">
-            <section className="bg-gray-800 text-gray-100 lg:mt-16 ">
+            <section className="bg-blue-950 text-gray-100 lg:mt-16 ">
                 <div className="container max-w-5xl py-12 mx-auto md:pl-5">
                     <div className="grid gap-4 mx-4 sm:grid-cols-12">
                         <div className="col-span-12 sm:col-span-3 md:w-52">

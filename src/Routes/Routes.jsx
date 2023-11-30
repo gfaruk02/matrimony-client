@@ -61,12 +61,12 @@ export const router = createBrowserRouter([
             {
                 path: '/detailsbiodata/:_id',
                 element: <PrivateRoute> <Detailsbiodata></Detailsbiodata> </PrivateRoute>,
-                loader: () => fetch('https://matrimony-server-smoky.vercel.app/biodatas')
+                loader: () => fetch('http://localhost:5000/biodatas')
             },
             {
                 path: '/checkout/:_id',
                 element: <Checkout></Checkout>,
-                loader: () => fetch('https://matrimony-server-smoky.vercel.app/biodatas')
+                loader: () => fetch('http://localhost:5000/biodatas')
             }
 
         ]

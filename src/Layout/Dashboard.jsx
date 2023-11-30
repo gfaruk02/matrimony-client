@@ -15,7 +15,7 @@ const Dashboard = () => {
 	}
 	return (
 		<div className="flex md:flex-row flex-col mt-20">
-			<div className="h-full p-3 space-y-2 w-72 bg-gray-900 text-gray-100">
+			<div className="h-full p-3 space-y-2 w-72 bg-blue-950 text-gray-100">
 				{user || isAdmin ? <div className="flex items-center p-2 space-x-4">
 					<img src={user.photoURL} alt="" className="w-12 h-12 rounded-full bg-gray-500" />
 					<div>
@@ -33,7 +33,7 @@ const Dashboard = () => {
 					<ul className="pt-2 pb-4 space-y-1 text-sm">
 						{
 							isAdmin ? <>
-								<li className="bg-gray-800 text-gray-50">
+								<li className="bg-gray-600 py-2 hover:bg-blue-600 text-gray-50">
 									<NavLink to='/dashboard/adminhome' className="flex items-center p-2 space-x-3 rounded-md">
 
 										<FaHome ></FaHome>
@@ -41,15 +41,13 @@ const Dashboard = () => {
 										<span>  Admin Dashboard </span>
 									</NavLink>
 								</li>
-								<li className="bg-gray-800 text-gray-50">
+								<li className="bg-gray-600 py-2 hover:bg-blue-600 text-gray-50">
 									<NavLink to='/dashboard/manageusers' className="flex items-center p-2 space-x-3 rounded-md">
 										<FaUserCog></FaUserCog>
-
-
 										<span> Manage Users </span>
 									</NavLink>
 								</li>
-								<li className="bg-gray-800 text-gray-50">
+								<li className="bg-gray-600 py-2 hover:bg-blue-600 text-gray-50">
 									<NavLink to='/dashboard/approvedpremium' className="flex items-center p-2 space-x-3 rounded-md">
 
 										<FaUserGraduate />
@@ -57,7 +55,7 @@ const Dashboard = () => {
 										<span> Approved Premium </span>
 									</NavLink>
 								</li>
-								<li className="bg-gray-800 text-gray-50">
+								<li className="bg-gray-600 py-2 hover:bg-blue-600 text-gray-50">
 									<NavLink to='/dashboard/approvedcontactrequest' className="flex items-center p-2 space-x-3 rounded-md">
 
 										<FaRegAddressBook />
@@ -65,7 +63,7 @@ const Dashboard = () => {
 
 									</NavLink>
 								</li>
-								<li className="bg-gray-800 text-gray-50">
+								<li className="bg-gray-600 py-2 hover:bg-blue-600 text-gray-50">
 									<NavLink to='/dashboard/successStory' className="flex items-center p-2 space-x-3 rounded-md">
 
 										<FaRegAddressBook />
@@ -74,32 +72,32 @@ const Dashboard = () => {
 									</NavLink>
 								</li>
 							</> : <> 
-						<li>
+						<li className="bg-gray-600 py-2 hover:bg-blue-600 text-gray-50">
 							<NavLink to="/dashboard/userhome" className="flex items-center p-2 space-x-3 rounded-md">
 								<FaEdit />
 								<span> User Home</span>
 							</NavLink>
 						</li>
-						<li>
+						<li className="bg-gray-600 py-2 hover:bg-blue-600 text-gray-50">
 							<NavLink to="/dashboard/editbiodata" className="flex items-center p-2 space-x-3 rounded-md">
 								<FaEdit />
 								<span> Edit Biodata</span>
 							</NavLink>
 						</li>
-						<li>
+						<li className="bg-gray-600 py-2 hover:bg-blue-600 text-gray-50">
 							<NavLink to="/dashboard/viewbiodata" className="flex items-center p-2 space-x-3 rounded-md">
 								<FaStreetView />
 								<span> View Biodata </span>
 							</NavLink>
 						</li>
-						<li>
+						<li className="bg-gray-600 py-2 hover:bg-blue-600 text-gray-50">
 							<NavLink to="/dashboard/contactrequest" className="flex items-center p-2 space-x-3 rounded-md">
 								<FaPhone />
 								<span> My Contact Request </span>
 							</NavLink>
 						</li>
 
-						<li>
+						<li className="bg-gray-600 py-2 hover:bg-blue-600 text-gray-50">
 							<NavLink to="/dashboard/favouritebiodata" className="flex items-center p-2 space-x-3 rounded-md">
 								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" className="w-5 h-5 fill-current text-gray-400">
 									<path d="M453.122,79.012a128,128,0,0,0-181.087.068l-15.511,15.7L241.142,79.114l-.1-.1a128,128,0,0,0-181.02,0l-6.91,6.91a128,128,0,0,0,0,181.019L235.485,449.314l20.595,21.578.491-.492.533.533L276.4,450.574,460.032,266.94a128.147,128.147,0,0,0,0-181.019ZM437.4,244.313,256.571,425.146,75.738,244.313a96,96,0,0,1,0-135.764l6.911-6.91a96,96,0,0,1,135.713-.051l38.093,38.787,38.274-38.736a96,96,0,0,1,135.765,0l6.91,6.909A96.11,96.11,0,0,1,437.4,244.313Z"></path>
@@ -107,7 +105,7 @@ const Dashboard = () => {
 								<span>Favourites Biodata</span>
 							</NavLink>
 						</li>
-						<li>
+						<li className="bg-gray-600 py-2 hover:bg-blue-600 text-gray-50">
 							<NavLink to="/dashboard/gotmarried" className="flex items-center p-2 space-x-3 rounded-md">
 								<FaUserSecret />
 								<span>Got Married</span>
@@ -116,7 +114,7 @@ const Dashboard = () => {
 						</>}
 					</ul>
 					<ul className="pt-4 pb-2 space-y-1 text-sm">
-						<li>
+						<li className="bg-gray-600 py-2 hover:bg-blue-600 text-gray-50">
 							<a rel="noopener noreferrer" href="#" className="flex items-center p-2 space-x-3 rounded-md">
 								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" className="w-5 h-5 fill-current text-gray-400">
 									<path d="M245.151,168a88,88,0,1,0,88,88A88.1,88.1,0,0,0,245.151,168Zm0,144a56,56,0,1,1,56-56A56.063,56.063,0,0,1,245.151,312Z"></path>
@@ -125,7 +123,7 @@ const Dashboard = () => {
 								<span>Settings</span>
 							</a>
 						</li>
-						<li>
+						<li className="bg-gray-600 py-2 hover:bg-blue-600 text-gray-50">
 							<a rel="noopener noreferrer" href="#" className="flex items-center p-2 space-x-3 rounded-md">
 								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" className="w-5 h-5 fill-current text-gray-400">
 									<path d="M440,424V88H352V13.005L88,58.522V424H16v32h86.9L352,490.358V120h56V456h88V424ZM320,453.642,120,426.056V85.478L320,51Z"></path>

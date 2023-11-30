@@ -4,7 +4,7 @@ import useAuth from "./useAuth";
 
 
 export const axiosSecure = axios.create({
-  baseURL: "https://matrimony-server-smoky.vercel.app"
+  baseURL: "http://localhost:5000"
 })
 
 const useAxiosSecure = () => {
