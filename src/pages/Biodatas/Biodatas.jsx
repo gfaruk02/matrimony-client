@@ -8,7 +8,6 @@ import { Helmet } from "react-helmet-async";
 const Biodatas = () => {
     const biodatas = useBiodata()
     // const showBiodatas = biodatas.slice(0, 20)
-
     const [page, setPage] = useState(0);
     const [rowsPerPage, setRowsPerPage] = useState(20);
     const [minAge, setMinAge] = useState('')
@@ -20,12 +19,10 @@ const Biodatas = () => {
     useEffect(() => {
         setFilteredBiodata(biodatas);
     }, [biodatas]);
-
     //pagination codes
     const handleChangePage = (event, newPage) => {
         setPage(newPage);
     };
-
     const handleChangeRowsPerPage = (event) => {
         setRowsPerPage(parseInt(event.target.value, 10));
         setPage(0);
@@ -40,13 +37,10 @@ const Biodatas = () => {
                 (person.age >= min && person.age <= max) &&
                 (gender === 'all' || gender === person.biodataType) &&
                 (division === 'all' || division === person.permanentDivision)
-
             );
         })
         setFilteredBiodata(filterAges)
-
     }
-
     // console.log(biodata);
     return (
         <div>
@@ -55,7 +49,7 @@ const Biodatas = () => {
             </Helmet>
             <section className="p-6 bg-blue-950 text-gray-100 mt-12">
                 <div className="container grid gap-6 mx-auto grid-cols-1 lg:grid-cols-3">
-                    <div className="w-full rounded-md bg-rose-900 px-5 lg:mt-20">
+                    <div className="w-full rounded-md bg-rose-900 px-5 lg:mt-20 max-h-[600px]">
                         <span className="block mb-2 text-violet-400"></span>
                         <h1 className="text-5xl font-extrabold ">Filter</h1>
                         <p className="my-5">
@@ -101,10 +95,8 @@ const Biodatas = () => {
                                 <option value="Sylhet">Sylhet</option>
                             </select>
                         </div>
-
                         <button onClick={handleSearch} type="button" className="w-full mt-5 py-3 font-semibold rounded bg-rose-400 text-gray-900">Filter Biodata</button>
                     </div>
-
                     <div className="w-full mx-auto col-span-2 text-center">
                         <h2 className="text-center text-4xl font-extrabold my-5"> Member
                             Profiles</h2>
@@ -113,7 +105,6 @@ const Biodatas = () => {
                                 filteredBiodata?.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map(biodats => <ShowBiodatas key={biodats._id} biodats={biodats}> </ShowBiodatas>)
                             }
                         </div>
-
                       <div className=" mt-10 bg-rose-400 rounded-lg "> 
                       <TablePagination
                             rowsPerPageOptions={[10,20,30,50,100]}
@@ -125,7 +116,6 @@ const Biodatas = () => {
                             onRowsPerPageChange={handleChangeRowsPerPage}
                         />
                       </div>
-
                     </div>
                 </div>
             </section>
