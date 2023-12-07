@@ -24,7 +24,7 @@ const ApprovedContactRequest = () => {
             confirmButtonText: "Yes, Active!"
           }).then((result) => {
             if (result.isConfirmed) {
-                axiosSecure.patch(`/contactRequests/${item._id}`)
+                axiosSecure.patch(`/contactRequest/${item._id}`)
                 .then(res => {
                     console.log(res.data);
                     if (res.data.modifiedCount > 0) {
