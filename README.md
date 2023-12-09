@@ -45,7 +45,7 @@ Login Page
 15. Login: This page for user login
 
 16. When  Register then see deshboard page . user and admin deshboard is deffirents activity..
-17. Normal User Dashboard:
+### Normal User Dashboard:
 When an user clicks on the Dashboard, he/she will be redirected to a
 page where there will be the following routes:
 A. Edit Biodata.
@@ -54,7 +54,8 @@ C. My Contact Request.
 D. Favourites Biodata .
 E. Logout (Button)
 
-Edit Biodata : In this Page, When users login successfully they can create /
+###### Edit Biodata : 
+In this Page, When users login successfully they can create /
 edit their biodata information .Every Biodata having the following
 information:
 ● Biodata Type [ Male | Female ]
@@ -78,5 +79,41 @@ Khulna,Maymansign,Sylhet]
 ● Contact Email 
 ● Mobile Number
 
+###### View Biodata :
+following information:
+● Biodata Type
+● Name
+● Profile Image
+● Date of birth
+● Height
+● Weight
+● Age
+● Occupation
+● Race
+● Fathers name
+● Mothers name
+● Permanent Division name
+● Present Division name
+● Expected Partner Age
+● Expected Partner Height
+● Expected Partner Weight
+● Contact Email
+● Mobile Number
+
+###### My Contact Request :
+Show the information in table :
+1. Name
+2. Biodata Id
+3. Status [Approve | Pending]
+4. Mobile No [If the status is approved]
+5. Email [If the status is approved]
+6. Delete Button
+###### My Favourites Biodata:
+Show the information in table :
+7. Name
+8. Biodata Id
+9. Permanent Address
+10.Occupation
+11. Delete Button
 
 
