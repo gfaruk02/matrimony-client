@@ -2,7 +2,7 @@
 
 I try to Creating an effective and user-friendly project for my website is important to attract the attention of potential user. Here are the key elements and details to include on homepage:
 
-1. Header section:
+### Header section:
 
 Logo: Place company logo on the top left for brand recognition.
 
@@ -22,7 +22,7 @@ Navigation Menu: Includes a clear and concise menu such as "Home",
 7. Footer Section: Include important links like "logo", "Social", "Menu", and "Legal"
 Provide links to social media profiles for easy sharing and engagement.
 
-Biodatas Page:
+### Biodatas Page:
 
 8. Show 20 biodatas with filter section
 Filter:
@@ -38,13 +38,13 @@ Age:
 Occupation:
 Button View Profile Details
 
-14. Register: This page for user regiter in website.
+### Register: This page for user regiter in website.
 
 Login Page 
 
-15. Login: This page for user login
+### Login: This page for user login
 
-16. When  Register then see deshboard page . user and admin deshboard is deffirents activity..
+When  Register then see deshboard page . user and admin deshboard is deffirents activity..
 ### Normal User Dashboard:
 When an user clicks on the Dashboard, he/she will be redirected to a
 page where there will be the following routes:
@@ -117,3 +117,45 @@ Show the information in table :
 11. Delete Button
 
 
+### Admin Dashboard
+
+When an admin clicks on the Dashboard, he/she will be redirected to a
+page where there will be the following routes:
+A. Admin Dashboard
+B. Manage Users
+C. Approved Premium
+D. Approved Contact Request
+E. Logout (Button)
+
+###### Admin Dashboard : /dashboard
+● Show the total biodata count.
+● Show the male biodata count.
+● Show the female biodata count.
+● Show the premium biodata count
+● Show the total revenue for purchasing contact information.
+
+###### Manage Users : /dashboard/manage
+Show all the users in a tabular form where each row will have:
+● User name
+● User email
+● Make admin
+● Make premium
+
+### ApprovedPremium :
+● Show all the premium approval request in a tabular form where
+each row will have:
+* Name
+* Email
+* Biodata Id
+* Make Premium
+By clicking the Make premium button user biodata will be premium .
+
+### Approved contact request :
+● Show all the all contact request in a tabular form where each
+row will have:
+* Name
+* Email
+* Biodata Id
+* Approved contact request
+By clicking the approved contact button approved the contact request and
+use will see the biodata contact from their contact request page
