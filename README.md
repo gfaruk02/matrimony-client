@@ -1,18 +1,49 @@
-# React + Vite
+# Assignment live link : https://matrimony-7efdc.web.app
 
+I try to Creating an effective and user-friendly project for my website is important to attract the attention of potential user. Here are the key elements and details to include on homepage:
 
-vercel link: https://matrimony-server-smoky.vercel.app
+1. Header section:
 
+Logo: Place company logo on the top left for brand recognition.
 
-live link: https://matrimony-server-smoky.vercel.app/
+Navigation Menu: Includes a clear and concise menu such as "Home", 
+"Biodatas", "About Us", "Contact Us", "Register" and "Login" When user Login then see DeshBoard.
 
-local server :
+2. Banner: Using slider .
 
+3. Premium Member Profiles: this section user see 6 Premium Member Profiles.
 
+4. How to find your life partner: Sign up with Emaill, Become a premium member, communicate and marry section
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+5. How Websites Work section.
 
-Currently, two official plugins are available:
+6. Website counter and next Success Story
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+7. Footer Section: Include important links like "logo", "Social", "Menu", and "Legal"
+Provide links to social media profiles for easy sharing and engagement.
+
+Biodatas Page:
+
+8. Show 20 biodatas with
+Biodata Id:
+Type:
+Division:
+Age:
+Occupation:
+Button View Profile Details
+9. SOmeThis about Brand section: When user click brand then go brand product page . this page designed one slider and some brand products . Brand product disple same info like:
+Name
+Band Name
+Type
+Price
+Rating
+Image
+Details button
+Update button
+
+14. Register: This page for user regiter in website.
+
+Login Page 
+
+15. Login: This page for user login
+
