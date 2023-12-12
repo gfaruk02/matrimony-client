@@ -1,7 +1,34 @@
 import { Helmet } from "react-helmet-async";
+import { useRef } from 'react';
+import emailjs from '@emailjs/browser';
+import Swal from 'sweetalert2';
+import { useLocation, useNavigate } from "react-router-dom";
 
 
 const Contact = () => {
+    const form = useRef();
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname ||"/";
+
+	const sendEmail = (e) => {
+		e.preventDefault();
+		emailjs.sendForm(import.meta.env.VITE_EMAIL_SERVICE_KEY, import.meta.env.VITE_TEMPLATE_KEY, form.current, import.meta.env.VITE_EMAIL_API_KEY)
+			.then((result) => {
+				console.log(result.text);
+				Swal.fire({
+					position: "top-end",
+					icon: "success",
+					title: "Your work has been saved",
+					showConfirmButton: false,
+					timer: 1000
+				});
+                navigate(from, {replace: true})
+			}, (error) => {
+				console.log(error.text);
+			});
+	};
+
     return (
         <div>
             <Helmet>
@@ -34,20 +61,20 @@ const Contact = () => {
                             </p>
                         </div>
                     </div>
-                    <form className="flex flex-col py-6 space-y-6 md:py-0 md:px-6 lg:mt-12 ">
+                    <form ref={form} onSubmit={sendEmail} className="flex flex-col py-6 space-y-6 md:py-0 md:px-6 lg:mt-12 ">
                         <label className="block">
                             <span className="mb-1">Full name</span>
-                            <input type="text" placeholder="Leroy Jenkins" className="block w-full rounded-md shadow-sm focus:ring focus:ri focus:ri bg-rose-500 py-3 pl-3" />
+                            <input type="text" name="user_name" placeholder="Leroy Jenkins" className="block w-full rounded-md shadow-sm focus:ring focus:ri focus:ri bg-rose-500 py-3 pl-3" />
                         </label>
                         <label className="block">
                             <span className="mb-1">Email address</span>
-                            <input type="email" placeholder="leroy@jenkins.com" className="block w-full rounded-md shadow-sm focus:ring focus:ri focus:ri bg-rose-500 py-3 pl-3" />
+                            <input type="email" name="user_email" placeholder="leroy@jenkins.com" className="block w-full rounded-md shadow-sm focus:ring focus:ri focus:ri bg-rose-500 py-3 pl-3" />
                         </label>
                         <label className="block">
                             <span className="mb-1">Message</span>
-                            <textarea rows="3" className="block w-full rounded-md focus:ring focus:ri focus:ri bg-rose-500"></textarea>
+                            <textarea name="message" rows="3" className="block w-full rounded-md focus:ring focus:ri focus:ri bg-rose-500"></textarea>
                         </label>
-                        <button type="button" className="self-center px-8 py-3 text-lg rounded focus:ring hover:ring focus:ri bg-rose-400 text-blue-900 focus:ri hover:ri">Submit</button>
+                        <button type="submit" value="Send" className="self-center px-8 py-3 text-lg rounded focus:ring hover:ring focus:ri bg-rose-400 text-blue-900 focus:ri hover:ri">Submit</button>
                     </form>
                 </div>
             </section>

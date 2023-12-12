@@ -27,6 +27,7 @@ import ContactRequest from "../pages/Dashboard/ContactRequest/ContactRequest";
 import AdminRoute from "./AdminRoute";
 import UserHome from "../pages/Dashboard/UserHome/UserHome";
 import ErrorPage from "../componets/ErrorPage/ErrorPage";
+import Faq from "../pages/Faq/Faq";
 
 export const router = createBrowserRouter([
     {
@@ -49,6 +50,10 @@ export const router = createBrowserRouter([
             {
                 path: '/contact',
                 element: <Contact></Contact>
+            },
+            {
+                path: '/faq',
+                element: <Faq></Faq>
             },
             {
                 path: '/register',

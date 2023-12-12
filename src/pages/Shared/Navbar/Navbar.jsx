@@ -92,6 +92,24 @@ function Navbar() {
         Contact Us
       </NavLink>
     </li>
+    <li className="list-none ml-5 text-lg rounded text-rose-600 font-semibold">
+      <NavLink
+        to="/faq"
+        style={({ isActive, isTransitioning }) => {
+          return {
+            fontWeight: isActive ? "bold" : " ",
+            padding: isActive ? "4px" : " ",
+            rounded: isActive ? "lg" : " ",
+            color: isActive ? "#5557B6" : "",
+            // backgroundColor: isActive ? "#F9A6E4" : "",
+            borderBottom: isActive ? "3px solid #0F13D1" : "",
+            viewTransitionName: isTransitioning ? "slide" : "",
+          };
+        }}
+      >
+       Faq
+      </NavLink>
+    </li>
 
     <li className="list-none ml-5 text-lg rounded text-rose-600 font-semibold">
       <NavLink
