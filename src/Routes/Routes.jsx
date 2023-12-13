@@ -28,6 +28,7 @@ import AdminRoute from "./AdminRoute";
 import UserHome from "../pages/Dashboard/UserHome/UserHome";
 import ErrorPage from "../componets/ErrorPage/ErrorPage";
 import Faq from "../pages/Faq/Faq";
+import FaqPost from "../pages/Dashboard/Admin/FaqPost";
 
 export const router = createBrowserRouter([
     {
@@ -101,6 +102,10 @@ export const router = createBrowserRouter([
             {
                 path: 'successStory',
                 element: <AdminRoute><SuccessStory></SuccessStory></AdminRoute>
+            },
+            {
+                path: 'faqpost',
+                element: <AdminRoute> <FaqPost></FaqPost> </AdminRoute>
             },
 
             //user routes

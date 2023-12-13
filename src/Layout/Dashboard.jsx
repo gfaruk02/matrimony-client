@@ -75,6 +75,14 @@ const Dashboard = () => {
 
 									</NavLink>
 								</li>
+								<li className="bg-gray-600 py-2 hover:bg-blue-600 text-gray-50">
+									<NavLink to='/dashboard/faqpost' className="flex items-center p-2 space-x-3 rounded-md">
+
+										<FaRegAddressBook />
+										<span> Post Faq </span>
+
+									</NavLink>
+								</li>
 							</> : <> 
 						<li className="bg-gray-600 py-2 hover:bg-blue-600 text-gray-50">
 							<NavLink to="/dashboard/userhome" className="flex items-center p-2 space-x-3 rounded-md">
