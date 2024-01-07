@@ -29,6 +29,7 @@ import UserHome from "../pages/Dashboard/UserHome/UserHome";
 import ErrorPage from "../componets/ErrorPage/ErrorPage";
 import Faq from "../pages/Faq/Faq";
 import FaqPost from "../pages/Dashboard/Admin/FaqPost";
+import Blog from "../pages/Blog/Blog";
 
 export const router = createBrowserRouter([
     {
@@ -63,6 +64,10 @@ export const router = createBrowserRouter([
             {
                 path: '/login',
                 element: <Login></Login>
+            },
+            {
+                path: '/blog',
+                element: <Blog></Blog>
             },
             {
                 path: '/detailsbiodata/:_id',
