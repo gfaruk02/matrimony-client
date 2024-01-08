@@ -2,6 +2,7 @@
 const Blog = () => {
     return (
         <div>
+            <button> create blog post</button>
             <h1>This is a Blog Page</h1>
         </div>
     );
